@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Resistors</title>
+<style>
+body{
+	padding:20px;
+	font-size:14px;
+}
+table{
+	position:relative;
+	float:left;
+}
+table, th, td{
+	background-color:#ffffff;
+	border:3px solid #c3c3c3;
+	border-collapse:collapse;
+	padding:0px 10px 0px 10px;
+	font-size:14px;
+}
+.textcenter{
+	text-align:center;
+}
+.row{
+	position:relative;
+	float:left;
+	width:100%;
+	margin-top:20px;
+}
+form{
+	position:relative;
+	float:left;
+	height:200px;
+	margin-right:20px;
+}
+select{
+	position:relative;
+	float:left;
+	/*left:22px;
+	top:46px;
+	z-index:100;*/
+}
+#clickMe {
+	position:relative;
+	float:left;
+	border:2px solid black;
+	padding:5px 15px 5px 15px;
+	margin:20px;
+	background:rgba(100,60,140,0.7);
+	border:solid #999999 3px;
+	color:#999999;
+	text-align:center;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	background-image:url(img/brushedMetal.jpg);
+	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+#clickMe:hover {
+	border:3px solid black;
+	color:black;
+	-webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+	background:#643c8c;
+	background:rgba(100,60,140,0.9);
+}
+#copyright{
+	position:absolute;
+	left:24px;
+	top:620px;
+	z-index:100;
+}
+</style>
+
+</head>
+<body onload="preloader('win1')" />
+<table>
+<tr>
+<th>Color</th>
+<th>Figures</th>
+<th>Multiplier</th>
+<th>Tolerance</th>
+</tr>
+<tr>
+<td>Black</td>
+<td class="textcenter">0</td>
+<td class="textcenter">x10<sup>0</sup></td>
+<td></td>
+</tr>
+<td>Brown</td>
+<td class="textcenter">1</td>
+<td class="textcenter">x10<sup>1</sup></td>
+<td class="textcenter">&plusmn;1&#37;</td>
+</tr>
+<td>Red</td>
+<td class="textcenter">2</td>
+<td class="textcenter">x10<sup>2</sup></td>
+<td class="textcenter">&plusmn;2&#37;</td>
+</tr>
+<td>Orange</td>
+<td class="textcenter">3</td>
+<td class="textcenter">x10<sup>3</sup></td>
+<td class="textcenter"></td>
+</tr>
+<td>Yellow</td>
+<td class="textcenter">4</td>
+<td class="textcenter">x10<sup>4</sup></td>
+<td></td>
+</tr>
+<td>Green</td>
+<td class="textcenter">5</td>
+<td class="textcenter">x10<sup>5</sup></td>
+<td class="textcenter">&plusmn;0.5&#37;</td>
+</tr>
+<td>Blue</td>
+<td class="textcenter">6</td>
+<td class="textcenter">x10<sup>6</sup></td>
+<td class="textcenter">&plusmn;0.25&#37;</td>
+</tr>
+<td>Violet</td>
+<td class="textcenter">7</td>
+<td class="textcenter">x10<sup>7</sup></td>
+<td class="textcenter">&plusmn;0.1&#37;</td>
+</tr>
+<td>Gray</td>
+<td class="textcenter">8</td>
+<td class="textcenter">x10<sup>8</sup></td>
+<td class="textcenter">&plusmn;0.05&#37;</td>
+</tr>
+<td>White</td>
+<td class="textcenter">9</td>
+<td class="textcenter">x10<sup>9</sup></td>
+<td></td>
+</tr>
+<td>Gold</td>
+<td></td>
+<td class="textcenter">x10<sup>-1</sup></td>
+<td class="textcenter">&plusmn;5&#37;</td>
+</tr>
+<td>Silver</td>
+<td></td>
+<td class="textcenter">x10<sup>-2</sup></td>
+<td class="textcenter">&plusmn;10&#37;</td>
+</tr>
+</table>
+
+
+
+
+
+
+<div class="row">
+What is the value of a resistor with <a id="myAnchor1"></a>, <a id="myAnchor2"></a>, <a id="myAnchor3"></a>, and <a id="myAnchor4"></a> color bands?
+</div>
+<div class="row">
+<form id="form1" name="form1" method="post" action="">
+	<input type="text" name="text1" />&Omega; with a tolerance of &plusmn;<input type="text" name="text2" />&#37;
+</form>
+
+<!--<form id="form1" name="form1" method="post" action="">
+  
+  <select name="digit1" id="Question01">
+    <!--Add items and values to the widget
+    <option>Please select an item</option>
+    <option disabled>Black</option>
+    <option value="10">Brown</option>
+    <option value=20>Red</option>
+    <option value="30">Orange</option>
+    <option value="40">Yellow</option>
+	<option value="50">Green</option>
+	<option value="60">Blue</option>
+	<option value="70">Violet</option>
+	<option value="80">Gray</option>
+	<option value="90">White</option>
+	<option disabled>Gold</option>
+	<option disabled>Silver</option>
+  </select>
+  
+  <select name="digit2" id="Question02">
+    <!-- Add items and values to the widget
+    <option>Please select an item</option>
+    <option value="0">Black</option>
+    <option value="1">Brown</option>
+    <option value="2">Red</option>
+    <option value=3>Orange</option>
+    <option value="4">Yellow</option>
+	<option value="5">Green</option>
+	<option value="6">Blue</option>
+	<option value="7">Violet</option>
+	<option value="8">Gray</option>
+	<option value="9">White</option>
+	<option disabled>Gold</option>
+	<option disabled>Silver</option>
+  </select>
+  
+  <select name="multiplier" id="Question03">
+    <!-- Add items and values to the widget
+    <option>Please select an item</option>
+    <option value="0">Black</option>
+    <option value="10">Brown</option>
+    <option value="100">Red</option>
+    <option value="1000">Orange</option>
+    <option value="10000">Yellow</option>
+	<option value="100000">Green</option>
+	<option value="1000000">Blue</option>
+	<option value="10000000">Violet</option>
+	<option value="100000000">Gray</option>
+	<option value="1000000000">White</option>
+	<option value="0.1">Gold</option>
+	<option value="0.01">Silver</option>
+  </select>
+
+  <select name="tolerance" id="Question04">
+    <!-- Add items and values to the widget
+    <option>Please select an item</option>
+    <option disabled>Black</option>
+    <option value="1">Brown</option>
+    <option value="2">Red</option>
+    <option disabled>Orange</option>
+    <option disabled>Yellow</option>
+	<option value="0.5">Green</option>
+	<option value="0.25">Blue</option>
+	<option value="0.1">Violet</option>
+	<option value="0.05">Gray</option>
+	<option disabled>White</option>
+	<option value="5">Gold</option>
+	<option value="10">Silver</option>
+  </select><br />
+  <!---<button onclick="checkAnswer(this.form1)">Submit</button>
+</form>-->
+<div id="clickMe" onclick="checkAnswer()">Click Me!</div>
+</div>
+
+
+<span id="blank"></span>
+<div id="copyright">&copy; 2012 Justin Riley</div>
+
+
+
+</body>
+<script>
+var oneChance=0;
+var question=new Array();
+var yourAnswer=new Array();
+function newQuestion(){
+	display1=(Math.floor(Math.random()*9)+1)/* number between 1 and 9 */;
+	display2=(Math.floor(Math.random()*10))/* number between 0 and 9 */;
+	display3=(Math.floor(Math.random()*12)-2)/* number between -2 and 9 */;
+	question[0]=((display1*10)+display2)*Math.pow(10,display3)/* 10 to the power of between -2 and 9 */;
+	if (question[0]<=10){
+		question[0]=question[0].toPrecision(2);
+	}
+	display4=(Math.floor(Math.random()*12)-2)/* number between -2 and 9 */;
+	if (display4==0){/// these turn blank tolerances into gold or silver
+		display4=-1;
+	}
+	else if (display4==3){
+		display4=-1;
+	}
+	else if (display4==4){
+		display4=-2;
+	}
+	else if (display4>=9){
+		display4=-2;
+	}
+	
+	if (display4==1){
+		question[1]=1;
+	}
+	else if (display4==2){
+		question[1]=2;
+	}
+	else if (display4==5){
+		question[1]=0.5;
+	}
+	else if (display4==6){
+		question[1]=0.25;
+	}
+	else if (display4==7){
+		question[1]=0.1;
+	}
+	else if (display4==8){
+		question[1]=0.05;
+	}
+	else if (display4==-1){
+		question[1]=5;
+	}
+	else if (display4<=-2){
+		question[1]=10;
+	}
+	/*displayQuestion0=question[0].toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");*/
+	/*question[1]=(Math.floor(Math.random( )*12)+1);*/
+	document.getElementById('myAnchor1').innerHTML=colorEncode(display1);
+	document.getElementById('myAnchor2').innerHTML=colorEncode(display2);
+	document.getElementById('myAnchor3').innerHTML=colorEncode(display3);
+	document.getElementById('myAnchor4').innerHTML=colorEncode(display4);
+	
+	///tryThis=((Math.floor((Math.random()*90)+10)));
+	///tryThis=tryThis * Math.pow(10,(Math.floor(Math.random()*12)-2));
+	///tryThis=tryThis.toPrecision(2);
+	///if (tryThis<=10){
+	///	tryThis=tryThis.toPrecision(2);
+	///}
+	///alert((tryThis.toString()));
+	///document.getElementById('myAnchor1').innerHTML=displayQuestion0;
+	///document.getElementById('myAnchor2').innerHTML=displayQuestion1;	
+}
+newQuestion();
+
+function colorEncode(x) {
+	if (x==0){
+		return "Black";
+	}
+	else if (x==1){
+		return "Brown";
+	}
+	else if (x==2){
+		return "Red";
+	}
+	else if (x==3){
+		return "Orange";
+	}
+	else if (x==4){
+		return "Yellow";
+	}
+	else if (x==5){
+		return "Green";
+	}
+	else if (x==6){
+		return "Blue";
+	}
+	else if (x==7){
+		return "Violet";
+	}
+	else if (x==8){
+		return "Gray";
+	}
+	else if (x==9){
+		return "White";
+	}
+	else if (x==-1){
+		return "Gold";
+	}
+	else if (x==-2){
+		return "Silver";
+	}
+	else {
+		return "ERROR";
+	}
+}
+
+
+function checkAnswer() {
+	if (oneChance == 0) {
+		yourAnswer[0]=parseFloat((document.form1.text1.value).replace(/\,/g,""));
+		yourAnswer[1]=parseFloat((document.form1.text2.value).replace(/\,/g,""));
+		if ((yourAnswer[0]==question[0]) && (yourAnswer[1]==question[1])){
+			document.getElementById("blank").innerHTML="<embed src=\"win1.mp3\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+			///alert(yourAnswer[0]+" ohms plus or minus "+displayYourAnswer+" percent is CORRECT!");
+			///setTimeout('document.getElementById("greatJob").className = "popup popupActive"',300);
+			setTimeout('alert(yourAnswer[0]+" ohms plus or minus "+yourAnswer[1]+" percent is CORRECT!")',60);
+			setTimeout('window.location.reload()',80);
+		}
+		else {
+			document.getElementById("blank").innerHTML="<embed src=\"fail1.mp3\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+			///alert("TRY AGAIN. "+yourAnswer[0]+" ohms plus or minus "+displayYourAnswer+" percent is WRONG.");
+			///setTimeout('document.getElementById("tryAgain").className = "popup popupActive"',300);
+			setTimeout('alert("TRY AGAIN. "+yourAnswer[0]+" ohms plus or minus "+yourAnswer[1]+" percent is WRONG.")',60);
+			setTimeout('window.location.reload()',80);
+		}
+	}
+	oneChance++;
+}
+
+function preloader(soundfile) {
+ 	document.getElementById("blank").innerHTML= "<embed src=\""+soundfile+".mp3\" hidden=\"true\" autostart=\"true\" loop=\"false\" volume=\"0\" />";
+}
+
+
+
+
+
+
+</script>
+</html>
